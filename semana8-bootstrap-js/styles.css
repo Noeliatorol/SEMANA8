@@ -1,0 +1,531 @@
+/* ========================================
+   ESTILOS PERSONALIZADOS - Semana 8
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   VARIABLES Y COLORES
+   ======================================== */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #fff;
+}
+
+/* ========================================
+   HEADER / ENCABEZADO
+   ======================================== */
+
+header {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header .nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+header .nav-link:hover,
+header .nav-link.active {
+    color: #0dcaf0 !important;
+    border-bottom: 2px solid #0dcaf0;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5rem 0;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+/* ========================================
+   CARRUSEL PERSONALIZADO
+   ======================================== */
+
+#carouselExample {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#carouselExample img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* ========================================
+   TABLA PERSONALIZADA
+   ======================================== */
+
+.custom-table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.custom-table thead {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #495057 100%);
+}
+
+.custom-table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #e7f3ff;
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table td {
+    vertical-align: middle;
+    padding: 1rem;
+}
+
+.custom-table th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 1rem;
+}
+
+/* ========================================
+   FORMULARIO PERSONALIZADO
+   ======================================== */
+
+#contactForm {
+    background: #f8f9fa;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #adb5bd;
+    font-size: 0.95rem;
+}
+
+.invalid-feedback {
+    display: block;
+    color: var(--danger-color);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* Validación de formulario */
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: var(--danger-color);
+    background-image: none;
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: var(--success-color);
+    background-image: none;
+}
+
+/* Botones del formulario */
+#contactForm .btn {
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0a58ca 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0a58ca 0%, #0845a0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #5a6268 100%);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #5a6268 0%, #454d55 100%);
+    transform: translateY(-2px);
+}
+
+/* Mensaje de éxito */
+#successMessage {
+    border-radius: 8px;
+    border: 2px solid var(--success-color);
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   TARJETAS (CARDS)
+   ======================================== */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* ========================================
+   FOOTER / PIE DE PÁGINA
+   ======================================== */
+
+footer {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #1a1e23 100%);
+    margin-top: 5rem;
+}
+
+footer h5 {
+    font-weight: 700;
+    color: #0dcaf0;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+footer a {
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #0dcaf0 !important;
+    text-shadow: 0 0 10px rgba(13, 202, 240, 0.5);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* ========================================
+   BADGES PERSONALIZADAS
+   ======================================== */
+
+.badge {
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   BOTONES PERSONALIZADOS
+   ======================================== */
+
+#alertBtn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#alertBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ========================================
+   SECCIONES
+   ======================================== */
+
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    color: var(--dark-color);
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #0dcaf0);
+    margin-top: 0.5rem;
+}
+
+#acerca section h2::after,
+#contacto section h2::after {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header .navbar-nav {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    #carouselExample img {
+        height: 250px;
+    }
+
+    .carousel-caption {
+        padding: 1rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    #contactForm {
+        padding: 2rem;
+    }
+
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 1rem 0 !important;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .custom-table {
+        font-size: 0.85rem;
+    }
+
+    .custom-table td,
+    .custom-table th {
+        padding: 0.5rem;
+    }
+
+    #contactForm {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+    }
+
+    footer h5 {
+        font-size: 1.1rem;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================================
+   ANIMACIONES GENERALES
+   ======================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), #0dcaf0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Sombras personalizadas */
+.shadow-custom {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-custom-lg {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
